@@ -1,0 +1,31 @@
+{
+  "name": "locilc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "lic": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loclink/koa-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loclink/koa-cli/issues"
+  },
+  "homepage": "https://github.com/loclink/koa-cli#readme",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "^9.3.0",
+    "download-git-repo": "^3.0.2",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.2.4",
+    "ora": "5.4.1"
+  }
+}
