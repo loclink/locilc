@@ -1,22 +1,24 @@
 # Locilc
 
-> 一个前端脚手架工具
+> 一个前端脚手架构建工具，持续更新中...
 
 ### 1. 概述：
 
-​	locilc是一个前端项目脚手架构建工具，目前仅支持搭建koa项目，下面是示例图：
+​	locilc是一个前端项目脚手架构建工具，目前支持的项目有：[koa](https://github.com/koajs/koa)、[tools-base](https://github.com/loclink/tools-base)
 
-![image](https://tva3.sinaimg.cn/large/0087ufIQgy1h3kry4l5ttj30l309fgpo.jpg)
+![locilc01](https://tva1.sinaimg.cn/large/0087ufIQgy1h46iyvyaevg30jd0bpmz8.gif)
 
 
 
 ### 2. 安装：
 
-- npm全局安装：
+- 使用npm全局安装：
 
   ``` shell
   npm install locilc -g
   ```
+
+
 
 ### 3. 如何使用
 
@@ -44,36 +46,21 @@
    ``` shell
    lic list        
    1. koa
+   2. tools-base
    ```
 
-   
 
-3. 使用脚手架创建项目：
 
-   `  lic create <project>`
 
-   参数：`  project` 为必填项，该参数将作为项目名称传入至执行程序，并以此作为项目名称来创建你所选择的项目。目前所支持的项目有：`koa` 
+### 4. 创建koa项目：
 
-   ![](https://tva2.sinaimg.cn/large/0087ufIQgy1h3kr97n63wj30q7039myj.jpg)
+使用指令：`  lic create <project>`   `<project>` 为必填项， 将进入项目模板选择列表，项目目录名称为该指令传入的`<project>`参数，`package.json`中`name`属性也取决于该参数的值。
 
-   ``` shell
-   lic craete demo1
-   ? Please select the project you want to create? koa
-   Initialize the repository...
-   ✔ Template cloned
-   ✔ Depend on the installation is complete
-   Completing the project!
-   
-   Start the project: 
-   
-     cd demo1
-     npm start
-   
-   ```
+参数：该参数将作为项目名称传入至执行程序，并以此作为项目名称来创建你所选择的项目。
 
-   
+![locilc01](https://tva1.sinaimg.cn/large/0087ufIQgy1h46iyvyaevg30jd0bpmz8.gif)
 
-### 4. koa项目文件目录结构划分：
+koa项目文件目录结构划分：
 
 ``` shell
 .
@@ -119,19 +106,45 @@ npm start
   
 ```
 
-> - 项目启动后你可以访问示例接口：
->
->   `http://localhost:2022/home?id=1` 该接口是`GET`请求
->
->   `POST`请求地址为：`http://localhost:2022/home`
+项目启动后你可以访问示例接口：
+
+`http://localhost:2022/home?id=1` 该接口是`GET`请求
+
+`POST`请求地址为：`http://localhost:2022/home`
 
 ​	**开始享受开发吧～**
 
-### 6. 归档：
+
+
+### 6. 关于tools-base：
+
+tools-base是一个起手式的工具库开发基础构建设施，使用typescript开发一个属于自己的工具库并发布至`npm`仓库供自己或其他开发者使用。
+
+详细内容请查阅： https://github.com/loclink/tools-base 
+
+
+
+### 7. 归档：
 
 - v1.0.0更新于2022/6/25：
   1. 加入koa脚手架创建项目
   2. 查询当前可搭建项目列表
   3. 查询版本号
+  
+- v1.0.1更新于2022/07/14：
 
-*如果你使用本工具觉得还不错，希望能留下一个star，本工具将持续更新*
+  1. 重构创建操作
+  2. 加入tools-base开发模板
+  3. 新增版本校验
+
+  
+
+### 8. 未来计划：
+
+1. 加入koa+ts+typeorm创建选项
+2. 加入vue相关创建选项（vue2、vue3、pinia、vite）
+3. 加入react相关创建选项（react+ts）
+4. 加入前端路由的快捷创建方式
+5. 加入后端路由的快捷创建方式
+
+*觉得还不戳的话请留下你的star吧~*
